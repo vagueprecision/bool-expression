@@ -1,0 +1,26 @@
+<table>
+<tr>
+    <th>
+      Name
+    </th>
+    <th>
+      Key
+    </th>
+    <th>
+      Sample Value
+    </th>
+</tr>
+<% @activities.each do |activity| %>
+<tr>
+   <td>
+      <%= activity.name %>
+   </td>
+   <td>
+      <%= activity.key %>
+   </td>
+   <td>
+      <%= activity.sample_value %>
+   </td>
+</tr>
+<%end %>
+</table>

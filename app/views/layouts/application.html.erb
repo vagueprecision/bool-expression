@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BoolExpression</title>
+    <title>Boolean Expression</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => "reload" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => "reload" %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="subpage">
+    <header id="header">
+			<div class="inner">
+				<span class="logo">Expression Demo App</span>
+				<nav id="nav">
+          <nav id="nav">
+              <a href="<%= expressions_path %>">All Expressions</a>
+          </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

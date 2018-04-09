@@ -1,0 +1,22 @@
+<%= javascript_include_tag "validate_expression" %>
+
+<h1>Create a new expression</h1>
+
+</br></br>
+
+<%= form_for @expression, url: {action: "create"} do |f| %>
+	Name: <%= f.text_field :name %>
+  <br/>
+	Expression: <%= f.text_field :expression %>
+	<div id='valid'></div>
+	<br/>
+	<span id="eval"></span>
+	<br/>
+	<%= f.submit class: 'button special' %>
+	<input type="button" id="sample_eval" class="button alt disabled" value="Sample Eval" />
+<% end %>
+
+
+</br></br>
+
+<%= render partial: './activities' %>

@@ -1,0 +1,23 @@
+<%= javascript_include_tag "validate_expression" %>
+
+<h1>Edit expression: <%= @expression.name %></h1>
+
+</br></br>
+
+<%= form_for @expression do |f| %>
+  Name: <%= f.text_field :name %>
+  <br/>
+  Expression: <%= f.text_field :expression %>
+  <div id='valid'></div>
+	</br>
+  <span id="eval"></span>
+  </br>
+  <%= f.submit class: 'button special' %>
+  <%= link_to "Delete", f.object, class: 'button alt', data: {method: 'DELETE'} %>
+	<input type="button" id="sample_eval" class="button alt" value="Sample Eval" />
+<% end %>
+<span id="eval"></span>
+
+</br></br>
+
+<%= render partial: './activities' %>

@@ -1,0 +1,29 @@
+<a href="<%= new_expression_path %>" class="button special">Create New Expression</a>
+
+<br/><br/>
+
+<table>
+<tr>
+    <th>
+      Name
+    </th>
+    <th>
+      Expression
+    </th>
+    <th>
+    </th>
+</tr>
+<% @expressions.each do |exp| %>
+<tr>
+   <td>
+      <a href="<%= edit_expression_path(exp.id) %>"><%= exp.name %></a>
+   </td>
+   <td>
+      <%= exp.expression %>
+   </td>
+   <td>
+      <%= link_to "Delete", exp, class: 'button alt', data: {method: 'DELETE'} %>
+   </td>
+</tr>
+<%end %>
+</table>
